@@ -1,17 +1,44 @@
 # Machine Learning with Python
 A daylong workshop from [District Data Labs][0]
 
+## Instructor
+Benjamin Bengfort
+
 
 ## Workshop Materials
-- [code repository][1] on GitHub
+- ['machine-learning' repository][1] on GitHub
+- ['product-classifier' repository][6] on GitHub
 - [workshop forum][2] on Piazza
 - [slides][3] on Slideshare
 
+
+## Notes
 
 ### Definitions
 *instance*  a single data point or example composed of fields
 *feature*   a quantity describing an instance
 *dimension* one or more attributes that describe a property
+
+
+### Feature Space
+refers to the _n_-dimensions where your variables live (
+
+
+### Mappings
+a mapping is a function _phi_ that adds a dimension to the feature space, e.g.
+R^3 -> R^4
+
+
+### Your task
+Given a data set of instances of size _N_, create a model that is fit from the
+data (built) by extracting features and dimensions. Then use that model to
+predict outcomes...
+
+1. data wrangling (normalization, standardization, imputing)
+2. feature analysis/extraction
+3. model selection/building
+4. model evaluation
+5. operationalize model
 
 
 ### Models
@@ -64,7 +91,7 @@ forks in a tree structure until a descision is made. Used for classification &
 regression.
 
 By artificially reducing complexity of your decision tree (making it shallower
-e.g. to be easier to undestand), you can introduce a lot of variance.
+e.g. to be easier to undestand), you can introduce a lot of error.
 
 E.g.
 * Classification & Regression Tree (CART)
@@ -86,39 +113,67 @@ E.g.
 * Averaged One-Dependence Estimators (AODE)
 * Bayesian Belief Network (BBN)
 
+#### Kernel Methods
+Map input data into higher dimensional vector space where the problem is easier
+to model. Named after the "kernel trick" which computes the inner product of
+images of pairs of data.
 
-### Feature Space
-refers to the _n_-dimensions where your variables live (
+E.g.
+* Support Vector Machines (SVM)
+* Radial Basis Function (RBF)
+* Linear Discriminant Analysis (LDA)
 
+#### Clustering Methods
+Organize data into groups whose members share maximum similarity (defined
+usually by a distance metric). Two main approaches: centroids and hierarchical
+clustering.
 
-### Mappings
-a mapping is a function _phi_ that adds a dimension to the feature space, e.g.
-R^3 -> R^4
+E.g.
+* k-Means
+* Affinity Propagation
+* OPTICS
+*
 
+#### Artificial Neural Networks
+Inspired by biological neural networks, ANNs are nonlinear function
+approximators function approximators that estimate functions with a large
+number of inputs.
 
-### Your task
-Given a data set of instances of size _N_, create a model that is fit from the
-data (built) by extracting features and dimensions. Then use that model to
-predict outcomes...
+E.g.
+* 
 
-1. data wrangling (normalization, standardization, imputing)
-2. feature analysis/extraction
-3. model selection/building
-4. model evaluation
-5. operationalize model
+#### Ensembles
+Models composed of multiple weak models that are trained independently and
+whose outputs are combined to make an overall prediction.
+
+* Boosting
+* Bootstrapped Aggregation (Bagging)
+* AdaBoost
+* Stacked Generalization (blending)
+* Gradient Boosting Machines (GBM)
+* Random Forest
+
+#### Other...
+The list above is not comprehensive, other algorithm and model classes include:
+
+E.g.
+* Conditional Random Fields (CRF)
+* Markovian Models (HMM)
+* Dimensionality Reduction (PCA, PLS)
+* Rule Learning (Apriori, Brill)
+* and others...
 
 
 ### Book reccomendations
 Someone was asking Benjamin Bengfort for book recommendations:
 
-- _Thoughtful Machine Learning_[4], Matthew Kirk (in Ruby; Python ver. pending)
-- _Collective Intelligence_[5], Toby Segaran
+- [Thoughtful Machine Learning][4], Matthew Kirk (in Ruby; Python ver. pending)
+- [Collective Intelligence][5], Toby Segaran
 
 
-## References
 [0]: http://www.districtdatalabs.com/#view-courses
 [1]: https://github.com/DistrictDataLabs/machine-learning.git
 [2]: https://piazza.com/class/iksgl08u58i3h4?cid=1
 [3]: http://www.slideshare.net/BenjaminBengfort/introduction-to-machine-learning-with-scikitlearn
 [4]: http://shop.oreilly.com/product/0636920039082.do
-[5]: 
+[5]: http://shop.oreilly.com/product/9780596529321.do 
